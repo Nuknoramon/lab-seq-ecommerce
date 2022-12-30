@@ -28,7 +28,7 @@ module.exports = (sequelize, Datatypes) => {
         name: "orderId",
       },
     });
-    Order.belongsToMany(db.Product, { through: db.OrderItem });
+    Order.belongsToMany(db.Product, { through: "order_items" });
   };
   return Order;
 };

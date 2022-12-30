@@ -7,6 +7,7 @@ const {
   Employee,
   Order,
   Product,
+  OrderItem,
 } = require("./models");
 
 // db.sequelize.sync({ alter: true });
@@ -23,9 +24,7 @@ const run = async () => {
   //   ],
   // });
 
-  const data = await Customer.findAll({
-    include: Order,
-  });
+  const data = await Customer.findAll({ include: Employee });
   console.log(JSON.stringify(data, null, 2));
 };
 

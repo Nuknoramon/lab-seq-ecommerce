@@ -26,7 +26,7 @@ module.exports = (sequelize, Datatypes) => {
         allowNull: false,
         name: "customerId",
       },
-      otherKry: {
+      otherKey: {
         allowNull: false,
         name: "employeeId",
       },
